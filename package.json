@@ -1,0 +1,41 @@
+{
+  "name": "alterndigital-com",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.3.1",
+  "scripts": {
+    "dev": "NODE_OPTIONS=--no-deprecation next dev",
+    "build": "NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8000\" next build --webpack",
+    "start": "NODE_OPTIONS=--no-deprecation next start",
+    "lint": "eslint",
+    "generate:importmap": "NODE_OPTIONS=--no-deprecation bunx payload generate:importmap",
+    "generate:types": "NODE_OPTIONS=--no-deprecation bunx payload generate:types",
+    "payload": "NODE_OPTIONS=--no-deprecation bunx payload",
+    "seed": "NODE_OPTIONS=--no-deprecation bun src/seed/run.ts"
+  },
+  "dependencies": {
+    "@payloadcms/db-postgres": "^3.84.1",
+    "@payloadcms/next": "^3.84.1",
+    "@payloadcms/richtext-lexical": "^3.84.1",
+    "@payloadcms/storage-s3": "^3.84.1",
+    "dotenv": "^17.4.2",
+    "graphql": "^16.13.2",
+    "lucide-react": "^1.14.0",
+    "next": "16.2.4",
+    "payload": "^3.84.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
