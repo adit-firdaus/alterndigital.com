@@ -253,30 +253,30 @@ export default function HomePage({
             {portfolioItems.map((project, i) => {
               const src = portfolioImageSrc(project);
               return (
-                <div
+              <div
                   key={project.id}
-                  data-testid={`portfolio-item-${i}`}
-                  className="bg-black group overflow-hidden"
-                >
-                  <div className="relative overflow-hidden h-48">
+                data-testid={`portfolio-item-${i}`}
+                className="bg-black group overflow-hidden"
+              >
+                <div className="relative overflow-hidden h-48">
                     {src ? (
-                      <Image
+                  <Image
                         src={src}
-                        alt={project.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover"
-                        style={{ filter: "grayscale(100%) contrast(1.1)" }}
-                      />
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover"
+                    style={{ filter: "grayscale(100%) contrast(1.1)" }}
+                  />
                     ) : null}
-                  </div>
-                  <div className="p-6 border-t border-white/10">
-                    <p className="text-[#666666] text-xs uppercase tracking-widest mb-2">
-                      {project.category} &middot; {project.year}
-                    </p>
-                    <h3 className="text-white font-semibold text-base">{project.title}</h3>
-                  </div>
                 </div>
+                <div className="p-6 border-t border-white/10">
+                  <p className="text-[#666666] text-xs uppercase tracking-widest mb-2">
+                    {project.category} &middot; {project.year}
+                  </p>
+                  <h3 className="text-white font-semibold text-base">{project.title}</h3>
+                </div>
+              </div>
               );
             })}
           </div>
