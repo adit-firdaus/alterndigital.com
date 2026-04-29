@@ -1,8 +1,11 @@
 /** Build WhatsApp `wa.me` links from plain-text messages. */
 
 export function waMeUrl(whatsappE164: string, message: string): string {
-  const e164 = whatsappE164.replace(/^\+/, "");
-  return `https://wa.me/${e164}?text=${encodeURIComponent(message)}`;
+  const raw = typeof whatsappE164 === "string" ? whatsappE164 : "";
+  const e164 = raw.replace(/^\+/, "");
+  if (!e164) return "#";
+  const text = typeof message === "string" ? message : "";
+  return `https://wa.me/${e164}?text=${encodeURIComponent(text)}`;
 }
 
 /** Decode URL-encoded waText segments (e.g. from legacy CMS values) for human-readable chat text. */
