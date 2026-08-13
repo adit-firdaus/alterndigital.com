@@ -78,6 +78,18 @@ async function upsertService() {
     }
   }
 
+  const existingPricing = await payload.find({
+    collection: "pricing-packages",
+    limit: 100,
+    pagination: false,
+  });
+  for (const p of existingPricing.docs) {
+    await payload.delete({
+      collection: "pricing-packages",
+      id: p.id,
+    });
+  }
+
   await payload.updateGlobal({
     slug: "site",
     data: siteGlobalSeed,
