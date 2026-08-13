@@ -14,7 +14,7 @@ const inter = Inter({
 export async function generateMetadata(): Promise<Metadata> {
   const site = await getSite();
   if (!site) {
-    return { title: "PT ALTERN DIGITAL TECHNOLOGIES" };
+    return { title: "ALTERN DIGITAL TECHNOLOGIES" };
   }
   return {
     title: site.metaTitle,

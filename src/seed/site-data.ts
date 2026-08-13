@@ -197,65 +197,6 @@ export const seedServices = [
   },
 ] as const;
 
-export const seedPricing = [
-  {
-    sortOrder: 0,
-    name: "Paket Website Profesional",
-    price: "Rp 7.500.000",
-    description: "Website company profile modern & responsif",
-    features: [
-      "Design custom & responsif",
-      "5 halaman konten",
-      "SEO dasar",
-      "1 tahun domain & hosting",
-      "Panel admin sederhana",
-    ],
-    waText: "Paket%20Website%20Profesional",
-  },
-  {
-    sortOrder: 1,
-    name: "Paket Aplikasi Mobile",
-    price: "Rp 18.000.000",
-    description: "Aplikasi Android & iOS custom",
-    features: [
-      "Android & iOS cross-platform",
-      "UI/UX design custom",
-      "Integrasi API",
-      "3 bulan maintenance",
-      "Upload ke App Store/Play Store",
-    ],
-    waText: "Paket%20Aplikasi%20Mobile",
-  },
-  {
-    sortOrder: 2,
-    name: "Paket Software Custom",
-    price: "Rp 25.000.000",
-    description: "Sistem manajemen enterprise",
-    features: [
-      "Analisis kebutuhan mendalam",
-      "Development full-stack",
-      "Database enterprise",
-      "Training pengguna",
-      "6 bulan support",
-    ],
-    waText: "Paket%20Software%20Custom",
-  },
-  {
-    sortOrder: 3,
-    name: "Paket Platform Digital",
-    price: "Rp 12.000.000",
-    description: "Portal web komersial & marketplace",
-    features: [
-      "Multi-user & multi-role",
-      "Payment gateway",
-      "Dashboard admin",
-      "Sistem notifikasi",
-      "3 bulan support",
-    ],
-    waText: "Paket%20Platform%20Digital",
-  },
-] as const;
-
 export const seedPortfolio = [
   {
     sortOrder: 0,

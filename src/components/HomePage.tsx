@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { ServiceIconCard } from "@/lib/service-icons";
-import { waMeUrl, waPricingInterestUrl } from "@/lib/wa";
-import type { PortfolioItem, PricingPackage, Service, Site } from "@/payload-types";
+import { waMeUrl } from "@/lib/wa";
+import type { PortfolioItem, Service, Site } from "@/payload-types";
 
 function portfolioImageSrc(item: PortfolioItem): string {
   const img = item.image;
@@ -75,14 +75,12 @@ const GeometricBg = () => (
 export type HomePageProps = {
   site: Site;
   services: Service[];
-  pricingPackages: PricingPackage[];
   portfolioItems: PortfolioItem[];
 };
 
 export default function HomePage({
   site,
   services,
-  pricingPackages,
   portfolioItems,
 }: HomePageProps) {
   const heroWa = waMeUrl(site.whatsappE164, site.whatsappDefaultMessage);
@@ -154,55 +152,6 @@ export default function HomePage({
                   <ArrowRight className="w-3 h-3" />
                 </div>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="harga"
-        data-testid="pricing-section"
-        className="py-32 bg-black border-t border-white/10"
-      >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24">
-          <div className="mb-16">
-            <p className="text-xs tracking-[0.3em] uppercase text-[#666666] mb-3">{site.pricingEyebrow}</p>
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">{site.pricingTitle}</h2>
-            <p className="text-[#AAAAAA] mt-3 text-base md:text-lg">{site.pricingSubtitle}</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {pricingPackages.map((pkg, i) => (
-              <div
-                key={pkg.id}
-                data-testid={`pricing-card-${i}`}
-                className="bg-white p-8 flex flex-col hover:bg-[#f5f5f5] transition-colors duration-200"
-              >
-                <h3 className="text-sm font-bold text-black uppercase tracking-wide mb-3">{pkg.name}</h3>
-                <p className="text-3xl font-bold text-black mb-1">{pkg.price}</p>
-                <p className="text-[#666666] text-sm mb-6">{pkg.description}</p>
-                <ul className="space-y-2 mb-8 flex-1">
-                  {(pkg.features ?? []).map((row, j) => (
-                    <li key={row.id ?? j} className="flex items-start gap-2 text-sm text-[#333333]">
-                      <span className="text-black mt-0.5 font-bold">—</span>
-                      <span>{row.line}</span>
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href={waPricingInterestUrl(
-                    site.whatsappE164,
-                    site.waLegalSuffix,
-                    pkg.waText,
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-testid={`pricing-wa-btn-${i}`}
-                  className="flex items-center justify-center gap-2 bg-black text-white text-xs font-bold uppercase tracking-widest px-6 py-4 hover:bg-[#333333] transition-colors duration-200"
-                >
-                  {site.pricingCardWaLabel}
-                  <ArrowRight className="w-3 h-3" />
-                </a>
-              </div>
             ))}
           </div>
         </div>

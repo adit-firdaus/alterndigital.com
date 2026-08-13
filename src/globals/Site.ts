@@ -45,7 +45,7 @@ export const Site: GlobalConfig = {
               name: "waLegalSuffix",
               type: "text",
               required: true,
-              defaultValue: "PT ALTERN DIGITAL TECHNOLOGIES.",
+              defaultValue: "ALTERN DIGITAL TECHNOLOGIES.",
               admin: {
                 description: "Appended after pricing/service waText in generated WhatsApp links.",
               },

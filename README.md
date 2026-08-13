@@ -1,6 +1,6 @@
 # alterndigital.com
 
-Marketing site for **PT ALTERN DIGITAL TECHNOLOGIES** — Next.js (App Router), TypeScript, Tailwind CSS v4, Payload CMS.
+Marketing site for **ALTERN DIGITAL TECHNOLOGIES** — Next.js (App Router), TypeScript, Tailwind CSS v4, Payload CMS.
 
 ## Commands
 

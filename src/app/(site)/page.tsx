@@ -15,15 +15,9 @@ export default async function Page() {
     );
   }
 
-  const [services, pricing, portfolio] = await Promise.all([
+  const [services, portfolio] = await Promise.all([
     payload.find({
       collection: "services",
-      sort: "sortOrder",
-      limit: 100,
-      pagination: false,
-    }),
-    payload.find({
-      collection: "pricing-packages",
       sort: "sortOrder",
       limit: 100,
       pagination: false,
@@ -41,7 +35,6 @@ export default async function Page() {
     <HomePage
       site={site}
       services={services.docs}
-      pricingPackages={pricing.docs}
       portfolioItems={portfolio.docs}
     />
   );

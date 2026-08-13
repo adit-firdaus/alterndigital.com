@@ -4,7 +4,7 @@ import { getPayload } from "payload";
 
 import config from "@payload-config";
 import { siteGlobalSeed } from "./site-global-defaults";
-import { seedPortfolio, seedPricing, seedServices } from "./site-data";
+import { seedPortfolio, seedServices } from "./site-data";
 
 async function upsertService() {
   const payload = await getPayload({ config });
@@ -54,31 +54,6 @@ async function upsertService() {
     }
   }
 
-  for (const p of seedPricing) {
-    const existing = await payload.find({
-      collection: "pricing-packages",
-      where: { name: { equals: p.name } },
-      limit: 1,
-    });
-    const data = {
-      name: p.name,
-      price: p.price,
-      description: p.description,
-      features: p.features.map((line) => ({ line })),
-      waText: p.waText,
-      sortOrder: p.sortOrder,
-    };
-    if (existing.docs[0]) {
-      await payload.update({
-        collection: "pricing-packages",
-        id: existing.docs[0].id,
-        data,
-      });
-    } else {
-      await payload.create({ collection: "pricing-packages", data });
-    }
-  }
-
   for (const item of seedPortfolio) {
     const existing = await payload.find({
       collection: "portfolio-items",
@@ -108,7 +83,7 @@ async function upsertService() {
     data: siteGlobalSeed,
   });
 
-  console.log("Seed completed: site global, services, pricing-packages, portfolio-items.");
+  console.log("Seed completed: site global, services, portfolio-items.");
 }
 
 upsertService().catch((e) => {

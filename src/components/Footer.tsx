@@ -28,8 +28,12 @@ export default function Footer({ site, services }: FooterProps) {
               {site.footerTaglineLine1}
               <br />
               {site.footerTaglineLine2}
-              <br />
-              {site.footerTaglineLine3}
+              {site.footerTaglineLine3 ? (
+                <>
+                  <br />
+                  {site.footerTaglineLine3}
+                </>
+              ) : null}
             </p>
           </div>
 

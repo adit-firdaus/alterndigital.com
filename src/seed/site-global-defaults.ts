@@ -1,27 +1,26 @@
 /** Default `site` global — matches `src/globals/Site.ts` fields. */
 
 export const siteGlobalSeed = {
-  metaTitle: "PT ALTERN DIGITAL TECHNOLOGIES — IT Consulting & Software Agency",
+  metaTitle: "ALTERN DIGITAL TECHNOLOGIES — IT Consulting & Software Agency",
   metaDescription:
     "Custom software, web platforms, mobile apps, and IT consulting in Jepara, Central Java, Indonesia.",
   brandShort: "ALTERN DIGITAL",
-  brandLegal: "PT ALTERN DIGITAL TECHNOLOGIES",
+  brandLegal: "ALTERN DIGITAL TECHNOLOGIES",
   whatsappE164: "6282331565165",
   whatsappDefaultMessage:
-    "Halo PT ALTERN DIGITAL TECHNOLOGIES, saya ingin konsultasi.",
-  waLegalSuffix: "PT ALTERN DIGITAL TECHNOLOGIES.",
+    "Halo ALTERN DIGITAL TECHNOLOGIES, saya ingin konsultasi.",
+  waLegalSuffix: "ALTERN DIGITAL TECHNOLOGIES.",
   navbarCtaLabel: "Mulai Proyek",
   navItems: [
     { label: "Beranda", hash: "#beranda" },
     { label: "Layanan", hash: "#layanan" },
-    { label: "Produk & Harga", hash: "#harga" },
     { label: "Tentang Kami", hash: "#tentang" },
     { label: "Portofolio", hash: "#portofolio" },
     { label: "Kontak", hash: "#kontak" },
   ],
   footerTaglineLine1: "IT Consulting & Software Agency",
   footerTaglineLine2: "Jepara, Jawa Tengah, Indonesia",
-  footerTaglineLine3: "Est. March 2026",
+  footerTaglineLine3: "",
   footerContactTitle: "Kontak / Contact",
   footerPhoneDisplay: "+62 823 3156 5165",
   footerEmailDisplay: "alterndigitaltechnologies5@gmail.com",
@@ -29,9 +28,9 @@ export const siteGlobalSeed = {
   footerAddressLine1: "Jl. Beringin Raya, Dermolo RT 001 RW 002,",
   footerAddressLine2: "Kembang, Jepara, Jawa Tengah 59453",
   footerServicesTitle: "Layanan / Services",
-  footerCopyright: "© 2026 PT ALTERN DIGITAL TECHNOLOGIES. All rights reserved.",
+  footerCopyright: "© 2026 ALTERN DIGITAL TECHNOLOGIES. All rights reserved.",
   footerBottomLine: "IT Consulting & Software Agency — Jepara, Indonesia",
-  heroKicker: "Est. March 2026 — Jepara, Jawa Tengah, Indonesia",
+  heroKicker: "Jepara, Jawa Tengah, Indonesia",
   heroTitleLine1: "Solusi Software & Digital",
   heroTitleLine2: "yang Cepat & Profesional",
   heroSubtitle:
@@ -46,15 +45,14 @@ export const siteGlobalSeed = {
   pricingSubtitle: "Our Service Packages",
   pricingCardWaLabel: "Pesan via WhatsApp",
   aboutEyebrow: "Tentang Kami / About Us",
-  aboutTitleLine1: "PT ALTERN DIGITAL",
+  aboutTitleLine1: "ALTERN DIGITAL",
   aboutTitleLine2: "TECHNOLOGIES",
   aboutBody1:
-    "Didirikan pada Maret 2026, kami adalah perusahaan IT consulting dan software agency berbasis di Jepara, Jawa Tengah. Kami hadir untuk membantu bisnis lokal dan nasional bertransformasi secara digital dengan solusi perangkat lunak yang presisi dan andal.",
+    "Kami adalah perusahaan IT consulting dan software agency berbasis di Jepara, Jawa Tengah. Kami hadir untuk membantu bisnis lokal dan nasional bertransformasi secara digital dengan solusi perangkat lunak yang presisi dan andal.",
   aboutBody2:
-    "Founded in March 2026, we are an IT consulting and software agency based in Jepara, Central Java. We help local and national businesses digitally transform with precision-built software solutions. Premium quality, professional delivery.",
+    "We are an IT consulting and software agency based in Jepara, Central Java. We help local and national businesses digitally transform with precision-built software solutions. Premium quality, professional delivery.",
   homeStats: [
     { value: "10+", label: "Proyek Selesai", labelEN: "Projects Completed" },
-    { value: "2026", label: "Tahun Berdiri", labelEN: "Year Founded" },
     { value: "4", label: "Layanan Utama", labelEN: "Core Services" },
     { value: "100%", label: "Kepuasan Klien", labelEN: "Client Satisfaction" },
   ],
