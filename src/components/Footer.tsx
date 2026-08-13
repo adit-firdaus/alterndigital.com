@@ -28,7 +28,7 @@ export default function Footer({ site, services }: FooterProps) {
               {site.footerTaglineLine1}
               <br />
               {site.footerTaglineLine2}
-              {site.footerTaglineLine3 ? (
+              {site.footerTaglineLine3?.trim() ? (
                 <>
                   <br />
                   {site.footerTaglineLine3}

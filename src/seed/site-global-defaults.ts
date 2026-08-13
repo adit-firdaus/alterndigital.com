@@ -20,7 +20,7 @@ export const siteGlobalSeed = {
   ],
   footerTaglineLine1: "IT Consulting & Software Agency",
   footerTaglineLine2: "Jepara, Jawa Tengah, Indonesia",
-  footerTaglineLine3: "",
+  footerTaglineLine3: " ",
   footerContactTitle: "Kontak / Contact",
   footerPhoneDisplay: "+62 823 3156 5165",
   footerEmailDisplay: "alterndigitaltechnologies5@gmail.com",
