@@ -1,5 +1,6 @@
 import { getSite } from "@/lib/site";
 import { waMeUrl } from "@/lib/wa";
+import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
@@ -35,6 +36,7 @@ export default async function PackagesPage() {
         <div className="mt-16 max-w-3xl">
           <h2 className="text-2xl font-bold mb-4">Cara memulai</h2>
           <p className="text-[#AAAAAA] leading-relaxed">Konsultasikan kebutuhan Anda, lalu kami susun penawaran. Ruang lingkup, harga, jadwal, dan biaya server atau layanan berulang dibahas sebelum pekerjaan dimulai.</p>
+          <Link href="/portal/pesan" className="inline-block mt-6 bg-white text-black px-6 py-3 font-semibold">Buat permintaan di portal</Link>
         </div>
       </div>
     </main>

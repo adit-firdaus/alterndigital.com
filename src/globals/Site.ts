@@ -1,10 +1,12 @@
 import type { GlobalConfig } from "payload";
+import { staffOnly } from "@/lib/portal/access";
 
 export const Site: GlobalConfig = {
   slug: "site",
   label: "Site (SEO, brand, navigation, footer, home)",
   access: {
     read: () => true,
+    update: staffOnly,
   },
   fields: [
     {

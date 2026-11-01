@@ -1,4 +1,5 @@
 import type { CollectionConfig } from "payload";
+import { staffOnly } from "@/lib/portal/access";
 
 export const PortfolioItems: CollectionConfig = {
   slug: "portfolio-items",
@@ -8,6 +9,7 @@ export const PortfolioItems: CollectionConfig = {
   },
   access: {
     read: () => true,
+    create: staffOnly, update: staffOnly, delete: staffOnly,
   },
   fields: [
     { name: "title", type: "text", required: true },

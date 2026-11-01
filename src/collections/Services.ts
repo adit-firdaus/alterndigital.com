@@ -1,4 +1,5 @@
 import type { CollectionConfig } from "payload";
+import { staffOnly } from "@/lib/portal/access";
 
 export const Services: CollectionConfig = {
   slug: "services",
@@ -8,6 +9,7 @@ export const Services: CollectionConfig = {
   },
   access: {
     read: () => true,
+    create: staffOnly, update: staffOnly, delete: staffOnly,
   },
   fields: [
     {

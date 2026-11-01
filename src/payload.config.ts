@@ -11,6 +11,10 @@ import { PricingPackages } from "./collections/PricingPackages";
 import { Services } from "./collections/Services";
 import { Users } from "./collections/Users";
 import { Site } from "./globals/Site";
+import { Customers } from "./collections/Customers";
+import { Orders } from "./collections/Orders";
+import { Invoices } from "./collections/Invoices";
+import { PaymentAttempts } from "./collections/PaymentAttempts";
 
 /** Payload admin import map & generated types live next to this file. */
 const baseDir = path.resolve(process.cwd(), "src");
@@ -38,7 +42,7 @@ export default buildConfig({
       baseDir,
     },
   },
-  collections: [Users, Media, Services, PricingPackages, PortfolioItems],
+  collections: [Users, Customers, Orders, Invoices, PaymentAttempts, Media, Services, PricingPackages, PortfolioItems],
   globals: [Site],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
