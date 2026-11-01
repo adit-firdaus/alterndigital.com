@@ -76,6 +76,15 @@ export default function Footer({ site, services }: FooterProps) {
               {site.footerServicesTitle}
             </p>
             <div className="space-y-2">
+              <Link href="/paket" className="block text-[#AAAAAA] text-sm hover:text-white transition-colors duration-200">
+                Produk & Harga
+              </Link>
+              <Link href="/faq" className="block text-[#AAAAAA] text-sm hover:text-white transition-colors duration-200">
+                FAQ
+              </Link>
+              <Link href="/kebijakan/syarat-ketentuan" className="block text-[#AAAAAA] text-sm hover:text-white transition-colors duration-200">Syarat & Ketentuan</Link>
+              <Link href="/kebijakan/refund-pembatalan" className="block text-[#AAAAAA] text-sm hover:text-white transition-colors duration-200">Refund & Pembatalan</Link>
+              <Link href="/kebijakan/privasi" className="block text-[#AAAAAA] text-sm hover:text-white transition-colors duration-200">Kebijakan Privasi</Link>
               {services.map((s) => (
                 <Link
                   key={s.slug}

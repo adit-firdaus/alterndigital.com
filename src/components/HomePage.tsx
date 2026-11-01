@@ -157,6 +157,15 @@ export default function HomePage({
         </div>
       </section>
 
+      <section className="py-24 bg-black border-t border-white/10">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24">
+          <p className="text-xs tracking-[0.3em] uppercase text-[#666666] mb-3">Produk & harga</p>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-6">Pilih solusi untuk bisnis Anda.</h2>
+          <p className="text-[#AAAAAA] max-w-2xl leading-relaxed mb-8">Dari aplikasi mobile dan website hingga server. Mulai dengan konsultasi, lalu dapatkan penawaran sesuai kebutuhan proyek Anda.</p>
+          <Link href="/paket" className="inline-flex items-center gap-3 bg-white text-black px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-[#EEEEEE] transition-colors">Lihat produk & harga <ArrowRight className="w-4 h-4" /></Link>
+        </div>
+      </section>
+
       <section
         id="tentang"
         data-testid="about-section"
